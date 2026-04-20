@@ -5,83 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashkan Pordel | Product Designer</title>
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section class="container">
-        <header class="section">
+    <main class="container">
+        <header class="intro">
             <h1>Ashkan Pordel</h1>
-            <p>Problem-solving Product Designer with 10 years of operational experience in complex digital ecosystems. Proven track record in Conversion Rate Optimization (CRO) and enhancing user engagement through structured design methodologies and rigorous validation. Expert in architecting scalable Design Systems to ensure product consistency and streamline technical development, with a primary focus on delivering measurable business outcomes and strategic product growth.</p>
+            <p class="subtitle">Digital Product Designer</p>
+            <p class="bio">Problem-solving Product Designer with 10 years of operational experience in complex digital ecosystems. Expert in architecting scalable Design Systems and driving growth through data-driven UX.</p>
         </header>
 
         <section class="section">
             <h2><i class="ph-duotone ph-briefcase"></i> Experience</h2>
-            
-            <button class="accordion">Eghamat 24 <span>+</span></button>
-            <div class="panel">
-                <ul>
-                    <li>Optimized hotel and flight reservation flows, leading to a significant increase in cart-to-checkout conversion rates.</li>
-                    <li>Designed and developed an intelligent comparison system for accommodations and flights to clarify user search intent and facilitate decision-making.</li>
-                    <li>Managed, maintained, and scaled the core Design System to ensure visual and functional consistency across all sub-products.</li>
-                    <li>Designed back-office panels, B2B sales dashboards, and business service systems to enhance organizational efficiency.</li>
-                    <li>Improved in-app map experiences and location-based UX by integrating GIS-driven processes.</li>
-                </ul>
-            </div>
+            <div class="projects">
+                <div class="project-card">
+                    <button class="accordion">Eghamat 24 <span>+</span></button>
+                    <div class="panel">
+                        <ul>
+                            <li>Optimized reservation flows, leading to a significant increase in cart-to-checkout conversion.</li>
+                            <li>Designed an intelligent comparison system to facilitate user decision-making.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <button class="accordion">Filimo School <span>+</span></button>
+                    <div class="panel">
+                        <ul>
+                            <li>Defined UX architecture based on pedagogical learning models.</li>
+                            <li>Boosted overall engagement by 35% through interactive user flows.</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <button class="accordion">Filimo School <span>+</span></button>
-            <div class="panel">
-                <ul>
-                    <li>Defined UX architecture based on student personas.</li>
-                    <li>Optimized learning journeys (25% reduction in drop-off).</li>
-                    <li>Implemented gamification to boost engagement by 35%.</li>
-                </ul>
-            </div>
-
-            <button class="accordion">Akharin Khabar <span>+</span></button>
-            <div class="panel">
-                <ul>
-                    <li>Redesigned homepage leading to 55% increase in retention.</li>
-                    <li>Built social ranking structure for 2.5x engagement growth.</li>
-                </ul>
-            </div>
-
-            <button class="accordion">Tapsi Shop <span>+</span></button>
-            <div class="panel">
-                <ul>
-                    <li>Designed low-friction shopping flow (+40% conversion).</li>
-                    <li>Developed modular design system for scalability.</li>
-                </ul>
+                <div class="project-card">
+                    <button class="accordion">Akharin Khabar <span>+</span></button>
+                    <div class="panel">
+                        <ul>
+                            <li>Redesigned homepage and social modules, leading to 55% retention growth.</li>
+                            <li>Built a new social ranking structure that resulted in 2.5x engagement.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2><i class="ph-duotone ph-lightbulb"></i> Skills</h2>
-            <div class="panel" style="max-height: 100%; border-left: 2px solid #000; padding: 15px; background: #fafafa;">
-                <p><strong>Product Strategy:</strong> Discovery, Design Sprints, Journey Mapping.</p>
-                <p><strong>Design:</strong> Architecture, Component-Based Design, Prototyping.</p>
-                <p><strong>Validation:</strong> CRO, Behavioral Analytics, Usability Testing.</p>
+            <h2><i class="ph-duotone ph-lightbulb"></i> Expertise</h2>
+            <div class="skills-grid">
+                <span>Product Strategy</span>
+                <span>Design Systems</span>
+                <span>CRO & Analytics</span>
+                <span>User Research</span>
             </div>
         </section>
-    </section>
+    </main>
 
     <script>
-        var acc = document.getElementsByClassName("accordion");
-        for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                var icon = this.querySelector('span');
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                    icon.textContent = "+";
-                } else {
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                const panel = button.nextElementSibling;
+                button.classList.toggle('active');
+                if (button.classList.contains('active')) {
                     panel.style.maxHeight = panel.scrollHeight + "px";
-                    icon.textContent = "−";
+                    button.querySelector('span').textContent = "−";
+                } else {
+                    panel.style.maxHeight = null;
+                    button.querySelector('span').textContent = "+";
                 }
             });
-        }
+        });
     </script>
 </body>
 </html>
