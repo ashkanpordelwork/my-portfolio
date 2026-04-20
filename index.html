@@ -1,15 +1,61 @@
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    acc[0].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        var icon = this.querySelector('span');
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-            icon.textContent = "+";
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-            icon.textContent = "−";
-        }
-    });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashkan Pordel | Product Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="container">
+        <header class="section">
+            <h1>Hi, I'm Ashkan and I'm a Product Designer with 10+ years experience.</h1>
+            <p>Designing and improving digital experiences with a focus on scalable design systems, user-centered research, and data-driven solutions that enhance engagement, boost conversion, and support business growth.</p>
+            <p>I work closely with cross-functional teams—from startups to large organizations—to create meaningful user value aligned with strategic goals.</p>
+        </header>
+
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="exp-item"><span>Eghamat 24 (2025 - Now)</span> <strong>Product Designer</strong></div>
+            <div class="exp-item"><span>Filimo (2024 - 2025)</span> <strong>Product Designer</strong></div>
+            <div class="exp-item"><span>Akharin Khabar (2022 - 2024)</span> <strong>Product Design Lead</strong></div>
+            <div class="exp-item"><span>Tapsi Shop (2020 - 2022)</span> <strong>Product Designer</strong></div>
+            <div class="exp-item"><span>Garden of Love (2018 - 2020)</span> <strong>Product Designer</strong></div>
+            <div class="exp-item"><span>Monoppy (2016 - 2018)</span> <strong>Product Designer</strong></div>
+        </section>
+
+        <section class="section">
+            <button class="accordion">Skills <span>+</span></button>
+            <div class="panel">
+                <p>Design Systems, User Research, Data-Driven Design, Prototyping, Wireframing, Strategic Product Planning.</p>
+            </div>
+        </section>
+
+        <footer class="section">
+            <h2>Contact</h2>
+            <p>Would you like to work with me or just have a question? Get in touch!</p>
+            <p>Email: <a href="mailto:ashkanpordel.work@gmail.com">ashkanpordel.work@gmail.com</a></p>
+            <p>Phone: (+98) 937 029 74 51</p>
+            <p>Social: <a href="#">LinkedIn</a> / <a href="#">Instagram</a></p>
+        </footer>
+    </section>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        acc[0].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            var icon = this.querySelector('span');
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                icon.textContent = "+";
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                icon.textContent = "−";
+            }
+        });
+    </script>
+</body>
+</html>
