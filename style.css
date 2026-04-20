@@ -6,7 +6,7 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 2. Reset & Base Styles */
+/* 2. Base Styles & Animations */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.7;
@@ -43,9 +43,18 @@ h2 {
     color: var(--text-secondary);
     margin-top: 50px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* 4. Accordion & Panel Components */
+/* 4. Iconography */
+i {
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
+/* 5. Accordion & Panels */
 .accordion {
     background: none;
     border: none;
@@ -95,12 +104,12 @@ h2 {
     font-size: 0.95rem;
 }
 
-/* 5. Links & Interactions */
+/* 6. Links */
 a {
     color: var(--text-main);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
     transition: var(--transition);
+    border-bottom: 1px solid transparent;
 }
 
 a:hover {
